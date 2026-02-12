@@ -103,6 +103,7 @@ pub enum ThemePreset {
   Gruvbox,
   GruvboxLight,
   CatppuccinMocha,
+  Cyberpunk,
   Custom, // When user has manually customized colors
 }
 
@@ -118,6 +119,7 @@ impl ThemePreset {
       ThemePreset::Gruvbox,
       ThemePreset::GruvboxLight,
       ThemePreset::CatppuccinMocha,
+      ThemePreset::Cyberpunk,
     ]
   }
 
@@ -132,6 +134,7 @@ impl ThemePreset {
       ThemePreset::Gruvbox => "Gruvbox",
       ThemePreset::GruvboxLight => "Gruvbox Light",
       ThemePreset::CatppuccinMocha => "Catppuccin Mocha",
+      ThemePreset::Cyberpunk => "Cyberpunk",
       ThemePreset::Custom => "Custom",
     }
   }
@@ -147,6 +150,7 @@ impl ThemePreset {
       "Gruvbox" => ThemePreset::Gruvbox,
       "Gruvbox Light" => ThemePreset::GruvboxLight,
       "Catppuccin Mocha" => ThemePreset::CatppuccinMocha,
+      "Cyberpunk" => ThemePreset::Cyberpunk,
       _ => ThemePreset::Custom,
     }
   }
@@ -312,6 +316,26 @@ impl ThemePreset {
         background: Color::Reset,
         header: Color::Rgb(180, 190, 254),             // Lavender
         highlighted_lyrics: Color::Rgb(180, 190, 254), // Lavender
+      },
+      ThemePreset::Cyberpunk => Theme {
+        analysis_bar: Color::Rgb(0, 229, 255),        // Neon cyan
+        analysis_bar_text: Color::Rgb(10, 10, 18),    // Near-black
+        active: Color::Rgb(0, 229, 255),               // Neon cyan
+        banner: Color::Rgb(255, 0, 60),                // Samurai red
+        error_border: Color::Rgb(255, 0, 60),          // Samurai red
+        error_text: Color::Rgb(255, 60, 90),           // Lighter red
+        hint: Color::Rgb(252, 238, 9),                 // Neon yellow
+        hovered: Color::Rgb(255, 32, 121),             // Hot pink
+        inactive: Color::Rgb(70, 82, 100),             // Muted steel
+        playbar_background: Color::Reset,
+        playbar_progress: Color::Rgb(0, 229, 255),     // Neon cyan
+        playbar_progress_text: Color::Rgb(10, 10, 18), // Near-black
+        playbar_text: Color::Rgb(0, 200, 220),         // Dimmer cyan
+        selected: Color::Rgb(0, 255, 239),             // Electric cyan
+        text: Color::Rgb(0, 220, 235),                 // Cyan text
+        background: Color::Reset,
+        header: Color::Rgb(255, 0, 60),                 // Samurai red
+        highlighted_lyrics: Color::Rgb(255, 32, 121),   // Hot pink
       },
       ThemePreset::Spotify => Theme {
         analysis_bar: Color::Rgb(29, 185, 84), // Spotify Green #1DB954
